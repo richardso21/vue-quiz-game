@@ -2,7 +2,6 @@
   <div class="Quiz">
     <Counter class="Counter" :i="qIndex" :c="qCorrect" :t="quizArr.length" />
     <QuizLayout @nextQ="nextQ" :question="quizArr[qIndex]" />
-    <button @click="checkCorrect">Test</button>
   </div>
 </template>
 
@@ -37,9 +36,6 @@ export default {
         // update quiz if there are more questions
         this.qIndex++;
       }
-    },
-    checkCorrect: function () {
-      console.log(this.qCorrect);
     },
   },
 };

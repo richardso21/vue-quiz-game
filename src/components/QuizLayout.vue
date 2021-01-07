@@ -1,6 +1,7 @@
 <template>
   <div class="question-container">
-    <pre class="code-block text-left"><code>{{ question.content }}</code></pre>
+    <pre v-highlightjs="question.content"><code class="javascript"></code></pre>
+    <br>
     <div class="question-choices">
       <div
         class="question-choice"
@@ -11,6 +12,7 @@
         {{ choice }}
       </div>
     </div>
+    <br>
     <button @click="checkAnswer">Submit</button>
   </div>
 </template>
@@ -21,6 +23,7 @@ export default {
   data() {
     return {
       selected: undefined,
+      code: "",
     };
   },
   props: {
@@ -40,4 +43,8 @@ export default {
 </script>
 
 <style>
+@import url("../../node_modules/highlight.js/styles/a11y-dark.css");
+button {
+  font-size: 2rem;
+}
 </style>

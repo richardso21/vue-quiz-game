@@ -2,6 +2,7 @@
   <div>
     <h1>{{ message }}</h1>
     <p>You got {{ $route.params.correct }} out of {{ $route.params.total }} questions given to you.</p>
+    <router-link to="/quiz" tag="button">Try again?</router-link>
   </div>
 </template>
 
