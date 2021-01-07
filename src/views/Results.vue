@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ message }}</h1>
-    <p>You got {{ $route.params.correct }} out of {{ $route.params.total }} questions given to you.</p>
+    <p>You got {{ $route.params.correct }} out of {{ $route.params.total }} questions correct.</p>
     <router-link to="/quiz" tag="button">Try again?</router-link>
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
   mounted() {
     console.log(this.$route.params.correct);
     const C = this.$route.params.correct;
-    if (C < 3) {
+    if (C < 5) {
       this.message = "Yikes!";
     } else if (C < 7) {
       this.message = "Nice!";
