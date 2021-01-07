@@ -16,6 +16,13 @@ const routes = [
     component: function() {
       return import(/* webpackChunkName: "about" */ "../views/Quiz.vue");
     }
+  },
+  {
+    path: "/results",
+    name: "Results",
+    component: function() {
+      return import(/* webpackChunkName: "about" */ "../views/Results.vue");
+    }
   }
 ];
 
